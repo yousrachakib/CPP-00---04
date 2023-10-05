@@ -114,15 +114,3 @@ int main() {
 
 
 ***In summary, private members of a class are used to encapsulate and hide internal implementation details, while public members define the interface and allow external code to interact with the class. This encapsulation and controlled access to data and functions help in achieving data abstraction, information hiding, and maintainability in object-oriented programming.***
-
-# what is a constructor ?
-
-* A constructor is a special member function of a class that is automatically called when an object of that class is created. Its primary purpose is to initialize the member variables of the class and prepare the object for use.
-Here are some key points about constructors in C++:
-**- initialization: The main task of a constructor is to initialize the member variables of the class. It ensures that the object is in a valid and usable state after it is created.**
-**- Same name as class: Constructors have the same name as the class they belong to. This allows the compiler to automatically identify and invoke the constructor when an object of the class is created.**
-**- No return type: Constructors do not have return types, not even void. They are automatically invoked during object creation and do not need to return anything explicitly.**
-**- Default constructor: If a class does not define any constructors explicitly, the compiler provides a default constructor. The default constructor has an empty body and takes no parameters. It initializes the member variables with their default values (e.g., numeric types are initialized to 0, pointers are initialized to nullptr, etc.).**
-**- Initialization list: Constructors often use an initialization list to initialize the member variables. The initialization list appears after the constructor's parameter list and initializes the member variables directly. This is considered a more efficient way of initialization compared to assigning values inside the constructor body.**
-
-

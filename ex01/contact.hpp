@@ -6,15 +6,15 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:42:26 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/04 12:11:53 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/05 12:37:25 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include <iostream>
 #include <string>
+#include <iostream>
 
 class Contact {
 private:
@@ -26,14 +26,22 @@ private:
 
 public:
     // Constructor
-    Contact();
+    Contact(void);
+	~Contact(void);
 
     // Getter methods
-    std::string getFirstName() const { return firstName; }
-    std::string getLastName() const { return lastName; }
-    std::string getNickname() const { return nickname; }
-    std::string getPhoneNumber() const { return phoneNumber; }
-    std::string getDarkestSecret() const { return darkestSecret; }
+    std::string getFirstName() const;
+    std::string getLastName() const;
+    std::string getNickname() const;
+    std::string getPhoneNumber() const;
+    std::string getDarkestSecret() const;
+	
+	//setter methods
+	void	set_FirstName(std::string	buffer);
+	void	set_LastName(std::string	buffer);
+	void	set_Nickname(std::string	buffer);
+	void	set_PhoneNumber(std::string	buffer);
+	void	set_DarkestSecret(std::string	buffer);
 };
 
 #endif
