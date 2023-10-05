@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:43:23 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/05 17:01:43 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/05 18:40:59 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@ int main(void)
 	{
 		std::cout << "Enter a Request >";
 		std::getline(std::cin, input);
-		// :cout << "Try again , we only allow (ADD | SEARCH | EXIT)" << std::endl;
 		if (input == "ADD")
-			// std::cout << "ADDFUNCTION" << std::endl;
 			ptr._add();
 		else if (input == "SEARCH")
-			// std::cout << "SEARCHFUNCTION" << std::endl;
 			ptr._search();
 		if (std::cin.eof())
 		{
