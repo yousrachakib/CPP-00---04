@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:22:14 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/06 20:16:00 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/07 12:33:50 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ int isAlldigit(std::string& input)
     }
     return 1;
 }
-
-
 int	Phonebook::_add(void)
 {
 	std::string buffer;
@@ -137,21 +135,21 @@ void Phonebook::_myputs(Contact contact)
 	if (contact.getFirstName().empty())
 	{
 		std::cout << " ------------------------------------------- " << std::endl;
-		std::cout << "  :( Failed to get info for this contact :( " << std::endl;
+		std::cout << "  ): Failed to get info for this contact :( " << std::endl;
 		std::cout << " ------------------------------------------- " << std::endl;
 		return ;
 	}
-	std::cout << "**************************************" << std::endl;
-	std::cout << "Firstname: " << contact.getFirstName() << std::endl;
-	std::cout << "**************************************" << std::endl;
-	std::cout << "Lastname: " << contact.getLastName() << std::endl;
-	std::cout << "**************************************" << std::endl;
-	std::cout << "Nickname: " << contact.getNickname() << std::endl;
-	std::cout << "**************************************" << std::endl;
-	std::cout << "Phonenumber: " << contact.getPhoneNumber() << std::endl;
-	std::cout << "**************************************" << std::endl;
-	std::cout << "Darkest secret: " << contact.getDarkestSecret() << std::endl;
-	std::cout << "**************************************" << std::endl;
+	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
+	std::cout << "|Firstname:      |" << contact.getFirstName() << std::endl;
+	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
+	std::cout << "|Lastname:       |" << contact.getLastName() << std::endl;
+	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
+	std::cout << "|Nickname:       |" << contact.getNickname() << std::endl;
+	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
+	std::cout << "|Phonenumber:    |" << contact.getPhoneNumber() << std::endl;
+	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
+	std::cout << "|Darkest secret: |" << contact.getDarkestSecret() << std::endl;
+	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
 }
 
 Contact	Phonebook::get_contact(int i)
@@ -220,3 +218,4 @@ void	Phonebook::_search(void)
 	if (!std::cin.eof())
 		_myputs(_contacts[buffer[0] - 1 - '0']);
 }
+
