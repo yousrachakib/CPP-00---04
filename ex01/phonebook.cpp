@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:22:14 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/07 12:33:50 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/08 23:43:32 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,8 @@ int	Phonebook::_add(void)
 		{
 			_contacts[index].set_DarkestSecret(buffer);
 			std::cout << "Congrats your contact has been added successfully!!" << std::endl;
+			index++;
+			break;;
 		}
 		else
 		{
@@ -126,7 +128,6 @@ int	Phonebook::_add(void)
 			return (1);	
 		}
 	}
-	index++;
 	return (0);
 }
 
@@ -168,10 +169,8 @@ std::string fixWidth(const std::string& str, size_t maxWidth)
     else
         return str;
 }
-int displayContent(const Contact contacts[8])
+void displayContent(const Contact contacts[8])
 {
-    int count = 0;
-    
     std::cout << " ___________________________________________ " << std::endl;
     std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
     std::cout << "|----------|----------|----------|----------|" << std::endl;
@@ -188,10 +187,9 @@ int displayContent(const Contact contacts[8])
             std::cout << "|" << std::setw(10) << fixWidth(contact.getNickname(), 10);
             std::cout << "|" << std::setw(10) << std::endl;
     		std::cout << " ------------------------------------------- " << std::endl;
-            count++;
         }
     }
-    return count;
+    return ;
 }
 
 void	Phonebook::_search(void)
