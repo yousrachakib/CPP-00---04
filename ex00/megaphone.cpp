@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 01:30:15 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/03 20:29:33 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/09 18:24:51 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 
 int main(int ac, char **av)
 {
+	std::string res;
+
 	if (ac < 2)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
 		for (int i = 1; av[i]; i++)
 		{
-			for (int j = 0; av[i][j]; j++)
-				std::cout << (char)toupper(av[i][j]);
+			res= av[i];
+			for (int j = 0; res[j]; j++)
+				std::cout << (char)std::toupper(res[j]);
 				
 		}
 	}

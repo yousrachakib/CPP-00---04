@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:22:14 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/08 23:43:32 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/09 18:31:15 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ int	Phonebook::_add(void)
 			_contacts[index].set_DarkestSecret(buffer);
 			std::cout << "Congrats your contact has been added successfully!!" << std::endl;
 			index++;
-			break;;
+			break;
 		}
 		else
 		{
@@ -151,11 +151,6 @@ void Phonebook::_myputs(Contact contact)
 	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
 	std::cout << "|Darkest secret: |" << contact.getDarkestSecret() << std::endl;
 	std::cout << "*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*" << std::endl;
-}
-
-Contact	Phonebook::get_contact(int i)
-{
-	return (_contacts[i % 8]);
 }
 
 std::string fixWidth(const std::string& str, size_t maxWidth)

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:37:18 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/08 22:33:20 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/09 18:30:08 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,13 @@ class Phonebook
 {
 	private:
 		Contact _contacts[8];
-	public:
 		int	index;
+	public:
 		Phonebook(void);
 		~Phonebook(void);
 		int	_add(void);
 		void	_search(void);
 		void	_myputs(Contact contact);
-		//getter
-		Contact get_contact(int i);
 		//setter
 		void	setindex(int n);
 };
