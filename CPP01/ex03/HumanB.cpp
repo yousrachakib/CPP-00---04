@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:35:17 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/11 20:32:55 by yochakib         ###   ########.fr       */
+/*   Created: 2023/10/11 18:58:48 by yochakib          #+#    #+#             */
+/*   Updated: 2023/10/11 20:22:25 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "HumanB.hpp"
+
+HumanB::HumanB(const std::string& name) : name(name){}
 
 
-Weapon::Weapon(const std::string& type) : type(type)
+void HumanB::setWeapon(Weapon& weapon)
 {
+	_weapon = &weapon;
 }
 
-Weapon::~Weapon()
+void HumanB::attack() const 
 {
+	if (_weapon != nullptr)
+		std::cout << name << " attacks with their " << _weapon->getType() << std::endl;
+
+	else
+		std::cout << name << "is unarmed and can only bite" << std::endl;
 }
 
-void Weapon::setType(const std::string& newType)
-{
-    type = newType;
-}
-
-
-const std::string& Weapon::getType(void) const
-{
-    return (type);
-}

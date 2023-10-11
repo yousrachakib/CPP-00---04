@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:35:17 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/11 20:32:55 by yochakib         ###   ########.fr       */
+/*   Created: 2023/10/11 20:19:48 by yochakib          #+#    #+#             */
+/*   Updated: 2023/10/11 20:21:48 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "HumanB.hpp"
+#include "HumanA.hpp"
 
-
-Weapon::Weapon(const std::string& type) : type(type)
+int main()
 {
+{
+Weapon club = Weapon("crude spiked club");
+HumanA bob("Bob", club);
+bob.attack();
+club.setType("some other type of club");
+bob.attack();
 }
-
-Weapon::~Weapon()
 {
+Weapon club = Weapon("crude spiked club");
+HumanB jim("Jim");
+jim.setWeapon(club);
+jim.attack();
+club.setType("some other type of club");
+jim.attack();
 }
-
-void Weapon::setType(const std::string& newType)
-{
-    type = newType;
-}
-
-
-const std::string& Weapon::getType(void) const
-{
-    return (type);
+return 0;
 }
