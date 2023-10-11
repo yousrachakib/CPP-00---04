@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:22:14 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/09 18:31:15 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:11:21 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	Phonebook::_add(void)
 		else
 		{
 			std::cout << "INVALID INPUT, TRY ALL OVER AGAIN !" << std::endl; 
-			return (1);	
+			return (0);	
 		}	
 	}
 	buffer.clear();
@@ -84,7 +84,7 @@ int	Phonebook::_add(void)
 		else
 		{
 			std::cout << "INVALID INPUT, TRY ALL OVER AGAIN !" << std::endl; 
-			return (1);	
+			return (0);	
 		}
 	}
 	buffer.clear();
@@ -96,7 +96,7 @@ int	Phonebook::_add(void)
 		else
 		{
 			std::cout << "INVALID INPUT, TRY ALL OVER AGAIN !" << std::endl; 
-			return (1);	
+			return (0);	
 		}
 	}
 	buffer.clear();
@@ -108,7 +108,7 @@ int	Phonebook::_add(void)
 		else
 		{
 			std::cout << "INVALID INPUT, TRY ALL OVER AGAIN !" << std::endl; 
-			return (1);	
+			return (0);	
 		}
 	}
 	buffer.clear();
@@ -119,13 +119,13 @@ int	Phonebook::_add(void)
 		{
 			_contacts[index].set_DarkestSecret(buffer);
 			std::cout << "Congrats your contact has been added successfully!!" << std::endl;
-			index++;
-			break;
+			setindex(index+1);
+			return (0);
 		}
 		else
 		{
 			std::cout << "INVALID INPUT, TRY ALL OVER AGAIN !" << std::endl; 
-			return (1);	
+			return (0);	
 		}
 	}
 	return (0);

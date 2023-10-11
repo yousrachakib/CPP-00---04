@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:43:23 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/08 22:35:36 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:10:43 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,7 @@ int main(void)
 		if (input == "EXIT")
 			break;
 		else if (input == "ADD")
-		{
-			while (ptr._add() == 1)
-				ptr._add();
-		}
+			ptr._add();
 		else if (input == "SEARCH")
 		{
 			ptr._search();
