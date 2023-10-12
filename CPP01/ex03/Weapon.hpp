@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:21:24 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/11 20:05:04 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:57:37 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Weapon
     public:
 		Weapon(const std::string& type);
 		~Weapon();
-        const std::string& getType(void) const;
+        const std::string& getType(void) const; 
         void setType(const std::string& newType);
 };
 

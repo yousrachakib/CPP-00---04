@@ -4,7 +4,7 @@ CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = brain
+NAME = WAR
 
 all: $(NAME)
 
