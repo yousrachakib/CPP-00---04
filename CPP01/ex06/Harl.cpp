@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:04:24 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/15 18:12:39 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/15 18:38:11 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,21 +50,19 @@ void Harl::complain(std::string level)
     {
         case 0:
             std::cout << "[ DEBUG ]" << std::endl;
-            std::cout << "This is a debug message." << std::endl;
+            Harl::debug();
             break;
         case 1:
             std::cout << "[ INFO ]" << std::endl;
-            std::cout << "This is an informational message." << std::endl;
+            Harl::info();
             break;
         case 2:
             std::cout << "[ WARNING ]" << std::endl;
-            std::cout << "This is a warning message." << std::endl;
-            std::cout << "Please pay attention!" << std::endl;
+            Harl::warning();
             break;
         case 3:
             std::cout << "[ ERROR ]" << std::endl;
-            std::cout << "An error occurred." << std::endl;
-            std::cout << "Please fix it immediately!" << std::endl;
+            Harl::error();
             break;
         default:
             std::cout << "Invalid log level." << std::endl;
