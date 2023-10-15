@@ -1,10 +1,10 @@
-SRC = main.cpp
+SRC = main.cpp fileName.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = WAR
+NAME = sed
 
 all: $(NAME)
 

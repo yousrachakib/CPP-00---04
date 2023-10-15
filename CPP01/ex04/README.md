@@ -23,7 +23,5 @@
 		- getline: Reads a line of text from the file.
 		- operator<<: Writes data to the file.
 		- operator>>: Reads data from the file.
-
-
-
-
+	
+	* The <fstream> header provides many more functionalities for file input/output operations, such as seeking, file position manipulation, error handling, and binary file operations. You can refer to the C++ documentation for further details on each of these classes and their member functions.
