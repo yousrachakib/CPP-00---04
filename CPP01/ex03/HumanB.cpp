@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:58:48 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/11 20:22:25 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:26:23 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void HumanB::attack() const
 		std::cout << name << " attacks with their " << _weapon->getType() << std::endl;
 
 	else
-		std::cout << name << "is unarmed and can only bite" << std::endl;
+		std::cout << name << " is unarmed and can only bite" << std::endl;
 }
 
