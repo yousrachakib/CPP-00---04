@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:47:53 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/14 23:50:45 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/15 15:56:59 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ void fileName::parseAndReplace()
         std::cout << "Failed to create output file: " << filename << ".replace" << std::endl;
         return;
     }
+	if (!to_replace.length() || !New.length())
+	{
+		std::cout << "Empty args" << std::endl;
+		return;
+	}
 
     std::string line;
     while (std::getline(inputFile, line))
@@ -62,5 +67,5 @@ void fileName::parseAndReplace()
 
     inputFile.close();
     outputFile.close();
-    std::cout << "File '" << filename << "' processed successfully." << std::endl;
+    std::cout << "File [" << filename << "] processed successfully." << std::endl;
 }

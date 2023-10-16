@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:11:21 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/10 11:21:51 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/15 15:25:31 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void randomChump(std::string name) 
 {
     Zombie* zombie = newZombie(name);
-    zombie->announce(); //arrow operator (->) 
+    zombie->announce();
     delete zombie;
 }

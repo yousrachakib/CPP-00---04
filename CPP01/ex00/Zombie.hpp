@@ -6,12 +6,11 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 09:48:30 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/10 11:06:26 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/15 15:15:44 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-
 #define ZOMBIE_HPP
 
 #include <string>

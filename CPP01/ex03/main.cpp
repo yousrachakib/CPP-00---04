@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:14:19 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/11 20:48:02 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/15 15:48:09 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,23 @@ int main()
 	human_b.attack();
 	return (0);
 }
+
+// int main()
+// {
+// {
+// Weapon club = Weapon("crude spiked club");
+// HumanA bob("Bob", club);
+// bob.attack();
+// club.setType("some other type of club");
+// bob.attack();
+// }
+
+// {
+// Weapon club = Weapon("crude spiked club");
+// HumanB jim("Jim");
+// jim.setWeapon(club);
+// jim.attack();
+// club.setType("some other type of club");
+// jim.attack();
+// }
+// }

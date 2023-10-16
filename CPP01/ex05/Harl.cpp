@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 14:29:21 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/15 14:57:24 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/15 17:16:51 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,24 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-	void (Harl::*complainFunction)();
-		if (level == "DEBUG")
-			complainFunction = &Harl::debug;
-		else if (level == "INFO")
-			complainFunction = &Harl::info;
-		else if (level == "WARNING")
-			complainFunction = &Harl::warning;
-		else if (level == "ERROR")
-			complainFunction = &Harl::error;
-		else
-		{
-			std::cout << "Unknown complaint level !!" << std::endl;
-			return ;
-		}
-		(this->*complainFunction)();
+	void (Harl::*complainFunction[4])();
+
+	int i = 0;
+	(complainFunction)[0] = &Harl::debug;
+	(complainFunction)[1] = &Harl::info;
+	(complainFunction)[2] = &Harl::warning;
+	(complainFunction)[3] = &Harl::error;
+
+	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	while (i < 4 && levels[i].compare(level))
+		i++;
+	if (i < 4)
+		(this->*complainFunction[i])();
+	else
+	{
+		std::cout << i ;
+		std::cout << "Level not found" << std::endl;
+	}
+
 }

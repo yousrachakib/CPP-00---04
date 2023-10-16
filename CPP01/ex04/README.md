@@ -25,3 +25,9 @@
 		- operator>>: Reads data from the file.
 	
 	* The <fstream> header provides many more functionalities for file input/output operations, such as seeking, file position manipulation, error handling, and binary file operations. You can refer to the C++ documentation for further details on each of these classes and their member functions.
+
+# std::string::find (size_t find (const string& str, size_t pos = 0) const):
+
+	* this function is useful to Searches the string for the first occurrence of the sequence specified by its arguments, When pos is specified, the search only includes characters at or after position pos, ignoring any possible occurrences that include characters before pos.
+	* return value : The position of the first character of the first match.
+	If no matches were found, the function returns string::npos.
