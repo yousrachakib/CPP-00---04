@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:06:41 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/22 17:54:23 by yochakib         ###   ########.fr       */
+/*   Created: 2023/10/22 17:52:58 by yochakib          #+#    #+#             */
+/*   Updated: 2023/10/22 20:17:09 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,25 @@ public:
 
 	// Operation overloading
     Fixed& operator=(const Fixed& other);
+    int operator>(const Fixed& other) const;
+    int operator<(const Fixed& other) const;
+    int operator>=(const Fixed& other) const;
+    int operator<=(const Fixed& other) const;
+    int operator==(const Fixed& other) const;
+    int operator!=(const Fixed& other) const;
+
+	// Arethmics operator
+	float operator+(const Fixed& other);
+	float operator*(const Fixed& other);
+	float operator-(const Fixed& other);
+	float operator/(const Fixed& other);
+	
+	//increment /decriment operators
+
+	Fixed&	operator++();
+	Fixed&	operator--();
+	Fixed&	operator++(int);
+	Fixed&	operator--(int);
 
 	//Method
 	int		toInt(void) const;
@@ -48,7 +67,6 @@ public:
 };
 
 std::ostream& operator<<(std::ostream& os,Fixed const &obj);
-
 
 
 #endif
