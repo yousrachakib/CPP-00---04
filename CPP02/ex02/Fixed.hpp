@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 17:52:58 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/22 20:17:09 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:41:55 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,17 @@ public:
 	
 	//increment /decriment operators
 
-	Fixed&	operator++();
-	Fixed&	operator--();
-	Fixed&	operator++(int);
-	Fixed&	operator--(int);
+	Fixed	operator++();
+	Fixed	operator--();
+	Fixed	operator++(int);
+	Fixed	operator--(int);
+
+	// overloaded member function
+
+	static Fixed& min(Fixed& first,Fixed& second); 
+	static Fixed& max(Fixed& first,Fixed& second);
+	static const Fixed &min(Fixed const &first, Fixed const &second);
+	static const Fixed &max(Fixed const &first, Fixed const &second);
 
 	//Method
 	int		toInt(void) const;
@@ -65,7 +72,6 @@ public:
 	// setter
 	void setRawbits(int const raw);
 };
-
 std::ostream& operator<<(std::ostream& os,Fixed const &obj);
 
 

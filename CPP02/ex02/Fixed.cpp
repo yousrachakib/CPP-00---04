@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:06:29 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/22 20:20:41 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/23 14:00:37 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,26 +114,59 @@ float Fixed::operator/(const Fixed& other)
 
 // increment/ decrement operator
 
-Fixed&	Fixed::operator++()
+Fixed	Fixed::operator++()
 {
 	this->fixed_point_value++;
 	return (*this);
 }
 
-Fixed&	Fixed::operator--()
+Fixed	Fixed::operator--()
 {
 	this->fixed_point_value--;
 	return (*this);
 }
 
-Fixed&	Fixed::operator++(int)
+//Methods :
+
+Fixed& Fixed::min(Fixed& first,Fixed& second)
+{
+	if (first.toFloat() >= second.toFloat())
+		return (second);
+	else
+		return (first);
+}
+Fixed& Fixed::max(Fixed& first,Fixed& second)
+{
+	if (first.toFloat() <= second.toFloat())
+		return (second);
+	else
+		return (first);
+}
+
+const Fixed	&Fixed::max(const Fixed &first, const Fixed &second)
+{
+	if (first.toFloat() >= second.toFloat())
+		return (first);
+	else
+		return (second);
+}
+
+const Fixed	&Fixed::min(const Fixed &first, const Fixed &second)
+{
+	if (first.toFloat() <= second.toFloat())
+		return (first);
+	else
+		return (second);
+}
+
+Fixed	Fixed::operator++(int)
 {
 	Fixed tmp = *this;
 	++this->fixed_point_value;
 	return(tmp);
 }
 
-Fixed&	Fixed::operator--(int)
+Fixed	Fixed::operator--(int)
 {
 	Fixed tmp = *this;
 	--this->fixed_point_value;
@@ -168,7 +201,6 @@ void Fixed::setRawbits(int const raw)
 {
 	fixed_point_value = raw;
 }
-
 
 // getters
 
