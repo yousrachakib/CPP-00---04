@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 19:54:58 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/25 20:09:28 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:29:14 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class FragTrap : public ClapTrap
 
 		FragTrap& operator=(const FragTrap& other);
 		void highFivesGuys(void);
+		
 };
 
 #endif

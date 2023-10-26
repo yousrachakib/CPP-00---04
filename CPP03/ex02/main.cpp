@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:04:31 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/25 20:09:11 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:28:48 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,27 @@
 
 int main() 
 {
-    ClapTrap clapTrap("Clappy");
-    clapTrap.attack("Enemy");
+    // ClapTrap clapTrap("Clappy");
+    // clapTrap.attack("Enemy");
 
-    ScavTrap scavTrap("Scavvy");
-    scavTrap.attack("Enemy");
-    scavTrap.guardGate();
+    // ScavTrap scavTrap("Scavvy");
+    // scavTrap.attack("Enemy");
+    // scavTrap.guardGate();
 
     FragTrap fragTrap("Fraggy");
     fragTrap.attack("Enemy");
+    fragTrap.attack("Enemy1");
+    fragTrap.attack("Enemy2");
     fragTrap.highFivesGuys();
 
-    FragTrap fragTrapCopy(fragTrap); // Testing copy constructor
-    fragTrapCopy.attack("Another Enemy");
-    fragTrapCopy.highFivesGuys();
+	FragTrap fragT = fragTrap;
 
-    ClapTrap& clapTrapRef = fragTrapCopy; // Polymorphism
-    clapTrapRef.attack("Yet Another Enemy");
+    // FragTrap fragTrapCopy(fragTrap); // Testing copy constructor
+    // fragTrapCopy.attack("Another Enemy");
+    // fragTrapCopy.highFivesGuys();
+
+    // ClapTrap& clapTrapRef = fragTrapCopy; // Polymorphism
+    // clapTrapRef.attack("Yet Another Enemy");
 
     return 0;
 }

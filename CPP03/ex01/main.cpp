@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:04:31 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/25 19:46:58 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:18:40 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main() 
 {
-    ClapTrap clapTrap("Clappy");
-    clapTrap.attack("Enemy");
+    // ClapTrap clapTrap("Clappy");
+    // clapTrap.attack("Enemy");
 
     ScavTrap scavTrap("Scavvy");
     scavTrap.attack("Enemy");

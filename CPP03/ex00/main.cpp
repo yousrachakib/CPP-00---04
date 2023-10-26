@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:04:31 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/24 19:12:31 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:10:18 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main() {
     clapTrap.takeDamage(2);  // Hit points: 6
 
     // Attack when hit points are zero
-    clapTrap.takeDamage(6);  // Hit points: 0
+    clapTrap.takeDamage(16);  // Hit points: 0
     clapTrap.attack("Enemy"); // Cannot attack, destroyed
 
     // Attack when energy points are zero

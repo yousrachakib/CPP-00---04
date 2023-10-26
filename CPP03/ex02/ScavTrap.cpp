@@ -6,13 +6,13 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:29:05 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/25 19:00:28 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:18:18 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
 	name = "Default";
 	hit_points = 100;
@@ -56,11 +56,8 @@ void ScavTrap::guardGate(void)
 
 void ScavTrap::attack(const std::string& target)
 {
-	if ( hit_points >= 1 ||energy_points >= 1)
-	{
-		std::cout << "ScavTrap from ClapTrap" << name << " attacks " << target << " and causes " << attack_damage << " hit points of damage." << std::endl;
-		energy_points--;
-	}
-	else
-		std::cout << "ScavTrap from ClapTrap" << name << " has insufficient energy points to attack." << std::endl;
+	if (hit_points == 0 || energy_points == 0)
+		return ;
+	std::cout << "ClapTrap " << name << " attacks " << target << " and causes " << attack_damage << " hit points of damage." << std::endl;
+	energy_points--;
 }
