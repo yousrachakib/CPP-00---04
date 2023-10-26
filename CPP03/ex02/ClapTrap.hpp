@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:34:12 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/26 16:18:38 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:39:44 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ protected:
 	unsigned int			attack_damage; 
 public:
 	ClapTrap();
-	ClapTrap(const std::string& name);
+	ClapTrap(const std::string& input_name);
 	ClapTrap(const ClapTrap &copy);
 	~ClapTrap();
 

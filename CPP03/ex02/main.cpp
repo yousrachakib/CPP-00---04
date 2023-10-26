@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:04:31 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/26 15:28:48 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/26 18:06:26 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
     fragTrap.attack("Enemy2");
     fragTrap.highFivesGuys();
 
-	FragTrap fragT = fragTrap;
+	// FragTrap fragT = fragTrap;
 
     // FragTrap fragTrapCopy(fragTrap); // Testing copy constructor
     // fragTrapCopy.attack("Another Enemy");
