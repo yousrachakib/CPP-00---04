@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:22:54 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/27 18:52:54 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:53:09 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef Cat_HPP
+#define Cat_HPP
 
 #include "Animal.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
     public :
-        Dog();
-        Dog(std::string& name);
-        Dog(const Dog& copy);
-        ~Dog();
+        Cat();
+        Cat(std::string& name);
+        Cat(const Cat& copy);
+        ~Cat();
     // copy assignement = 
-    Dog& operator=(const Dog& other);
-
-    //Methods 
+    Cat& operator=(const Cat& other);
     void makeSound() const;
     //getter
-        std::string& get_dogname();
+        std::string& get_Catname();
 };
 
 #endif

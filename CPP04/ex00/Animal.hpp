@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:59:11 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/27 16:15:15 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:54:24 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ class Animal
         //copy assignemet
         Animal& operator=(const Animal& other);
 
+        //Methods
+        virtual void makeSound() const;
         //getter and setter
-        std::string& get_type();
+        const std::string& get_type() const;
         void set_type(const std::string& type);
         
 };

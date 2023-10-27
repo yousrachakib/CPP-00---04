@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:40:02 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/27 16:54:33 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:52:59 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ Dog& Dog::operator=(const Dog& other)
     std::cout << "Dog class called copy assignement operator" << std::endl;
     Animal::operator=(other);
     return (*this);
+}
+//Methods
+
+void Dog::makeSound() const
+{
+    std::cout << "Dog barks" << std::endl;
 }
 
 //getter & setter:

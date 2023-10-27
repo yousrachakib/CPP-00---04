@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:03:34 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/27 16:53:52 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:54:17 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,22 @@ Animal& Animal::operator=(const Animal& other)
     return (*this);
 }
 
+
+
 //getter and setter:
-std::string& Animal::get_type()
+const std::string& Animal::get_type() const
 {
-    return (this->type);
+    return (type);
 }
 
 void Animal::set_type(const std::string& type)
 {
     this->type = type;
+}
+
+//Methods
+
+void Animal::makeSound() const
+{
+    std::cout << "Animal makes a sound" << std::endl;
 }
