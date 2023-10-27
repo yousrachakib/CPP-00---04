@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 12:09:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/25 19:54:32 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 21:06:59 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : public ClapTrap
+{
 public:
-	ScavTrap(void);
-	ScavTrap(const std::string& name);
+	ScavTrap();
+	ScavTrap(const std::string& input_name);
 	ScavTrap(const ScavTrap &copy);
 	~ScavTrap();
 
@@ -28,6 +29,7 @@ public:
 	// Main member function 
 	void guardGate(void);
 	void attack(const std::string& target);
+	//
 };
 
 #endif

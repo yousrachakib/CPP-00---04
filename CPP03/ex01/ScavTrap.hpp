@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 12:09:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/25 19:00:00 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 20:48:13 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class ScavTrap : public ClapTrap {
 public:
 	ScavTrap(void);
-	ScavTrap(const std::string& name);
+	ScavTrap(const std::string& input_name);
 	ScavTrap(const ScavTrap &copy);
 	~ScavTrap();
 

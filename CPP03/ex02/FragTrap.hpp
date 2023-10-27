@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 19:54:58 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/26 15:29:14 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 21:10:11 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class FragTrap : public ClapTrap
 {
 	public :
 		FragTrap();
-		FragTrap(const std::string& name);
+		FragTrap(const std::string& input_name);
 		FragTrap(const FragTrap& copy);
 		~FragTrap();
 

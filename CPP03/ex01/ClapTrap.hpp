@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:34:12 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/26 16:19:00 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 20:47:07 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ class ClapTrap
 {
 protected:
 	std::string name;
-	unsigned int		hit_points;
+	unsigned int			hit_points;
 	unsigned int			energy_points;
 	unsigned int			attack_damage; 
 public:
 	ClapTrap();
-	ClapTrap(const std::string& name);
+	ClapTrap(const std::string& input_name);
 	ClapTrap(const ClapTrap &copy);
 	~ClapTrap();
 

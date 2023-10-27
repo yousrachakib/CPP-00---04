@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 19:59:06 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/26 17:19:02 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 21:10:30 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ FragTrap::FragTrap() : ClapTrap()
 	std::cout << "FragTrap from ClapTrap " << name << " created with default constructor." << std::endl;
 }
 
-FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string& input_name) : ClapTrap(input_name)
 {
+	name = input_name;
 	hit_points = 100;
 	energy_points = 100;
 	attack_damage = 30;

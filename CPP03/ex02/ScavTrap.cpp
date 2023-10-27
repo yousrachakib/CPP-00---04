@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:29:05 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/26 17:18:18 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/27 21:13:58 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ ScavTrap::ScavTrap() : ClapTrap()
 	std::cout << "ScavTrap from ClapTrap " << name << " created with default constructor." << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
+ScavTrap::ScavTrap(const std::string& input_name) : ClapTrap(name)
 {
+	name = input_name;
 	hit_points = 100;
 	energy_points = 50;
 	attack_damage = 20;
@@ -58,6 +59,6 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (hit_points == 0 || energy_points == 0)
 		return ;
-	std::cout << "ClapTrap " << name << " attacks " << target << " and causes " << attack_damage << " hit points of damage." << std::endl;
+	std::cout << "ScavTrap " << name << " attacks " << target << " and causes " << attack_damage << " hit points of damage." << std::endl;
 	energy_points--;
 }
