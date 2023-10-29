@@ -4,7 +4,7 @@ CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Sound
+NAME = Brain_sound
 
 all: $(NAME)
 

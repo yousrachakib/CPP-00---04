@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 21:29:35 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/29 15:08:38 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/29 15:39:12 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+void ll(void)
+{
+	system("leaks Brain_sound");
+}
 
 int main() 
 {
     const int arraySize = 10;
     Animal* animals[arraySize];
 
+	atexit(ll);
     for (int i = 0; i < arraySize; ++i) 
     {
         if (i < arraySize / 2) 

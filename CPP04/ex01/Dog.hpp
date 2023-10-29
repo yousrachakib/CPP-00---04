@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:22:54 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/28 18:59:47 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/29 15:38:20 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "Animal.hpp"
 #include "Brain.hpp"
+
+class Brain;
 
 class Dog : public Animal
 {

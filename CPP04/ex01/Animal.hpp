@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:59:11 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/27 18:54:24 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/29 15:39:49 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Animal
         Animal();
         Animal(const std::string& type);
         Animal(const Animal& copy);
-        ~Animal();
+        virtual ~Animal();
 
         //copy assignemet
         Animal& operator=(const Animal& other);
