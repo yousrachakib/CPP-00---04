@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:37:53 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/27 18:59:36 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/28 18:04:06 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,17 @@ int main()
     std::cout << std::endl;
 
     std::cout << "Calling makeSound() on Dog:" << std::endl;
-    j->makeSound(); // Output: "Woof!"
+    j->makeSound(); // Output: "Woof!??
 
     std::cout << std::endl;
 
     std::cout << "Calling makeSound() on Animal:" << std::endl;
-    meta->makeSound(); // Output: "Generic animal sound!"
+    meta->makeSound();
+    std::cout << std::endl;
+    
+    delete meta;
+    delete j;
+    delete i;
+
     return 0;
 }
