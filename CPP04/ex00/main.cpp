@@ -6,13 +6,15 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:37:53 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/28 18:04:06 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:48:41 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
+#include "WrongAnimal.hpp"
 
 int main()
 {
@@ -41,6 +43,14 @@ int main()
     std::cout << "Calling makeSound() on Animal:" << std::endl;
     meta->makeSound();
     std::cout << std::endl;
+
+	const WrongAnimal* Wmeta = new WrongAnimal();
+	const WrongAnimal* Wi = new WrongCat();
+	std::cout << Wi->getType() << " " << std::endl;
+	Wi->makeSound(); //will output the animal sound!
+	Wmeta->makeSound();
+	delete Wmeta;
+	delete Wi;
     
     delete meta;
     delete j;
