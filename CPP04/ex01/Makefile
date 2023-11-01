@@ -6,12 +6,14 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = Brain_sound
 
+HEADER = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADER)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp $(HEADER)
 	$(CC) $(CPPFLAGS) -c $< -o $@
 
 clean:

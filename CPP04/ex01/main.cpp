@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 21:29:35 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/29 15:39:12 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 13:00:15 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,29 @@ void ll(void)
 
 int main() 
 {
-    const int arraySize = 10;
-    Animal* animals[arraySize];
+    // const int arraySize = 10;
+    // Animal* animals[arraySize];
 
 	atexit(ll);
-    for (int i = 0; i < arraySize; ++i) 
-    {
-        if (i < arraySize / 2) 
-        {
-            animals[i] = new Dog();
-        } 
-        else 
-        {
-            animals[i] = new Cat();
-        }
-    }
+	Dog basic;
+	{
+		Dog tmp = basic;
+	}
+    // for (int i = 0; i < arraySize; ++i) 
+    // {
+    //     if (i < arraySize / 2) 
+    //     {
+    //         animals[i] = new Dog();
+    //     } 
+    //     else 
+    //     {
+    //         animals[i] = new Cat();
+    //     }
+    // }
 
-    // Loop over the array and delete each Animal
-    for (int i = 0; i < arraySize; ++i) {
-        delete animals[i];
-    }
+    // // Loop over the array and delete each Animal
+    // for (int i = 0; i < arraySize; ++i) {
+    //     delete animals[i];
+    // }
     return 0;
 }

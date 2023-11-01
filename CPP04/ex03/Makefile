@@ -5,13 +5,14 @@ RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = Interfeces
+HEADER = AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp PPP.hpp
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADER)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp $(HEADER)
 	$(CC) $(CPPFLAGS) -c $< -o $@
 
 clean:
