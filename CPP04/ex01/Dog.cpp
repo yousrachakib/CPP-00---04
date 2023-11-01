@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:40:02 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/31 21:28:18 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 14:29:30 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Dog::Dog(const Dog& copy) : Animal(copy)
 {
     std::cout << "Dog class called the copy constructor to create [" << get_dogname() << " ]"<< std::endl;
 	this->type = copy.type;
-	attribute_dog = new Brain(*this->attribute_dog);
+	attribute_dog = new Brain(*copy.attribute_dog);
 }
 
 Dog::~Dog()

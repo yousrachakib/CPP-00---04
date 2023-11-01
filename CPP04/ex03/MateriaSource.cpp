@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:40:26 by yochakib          #+#    #+#             */
-/*   Updated: 2023/11/01 12:51:29 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 14:36:01 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,16 @@ MateriaSource::MateriaSource() : IMateriaSource()
 	{
         source[i] = NULL;
     }
-    for (int i = 0; i < 4; i++) 
-	{
-        types[i] = "";
-    }
 }
 
 MateriaSource::MateriaSource(const MateriaSource &copy)
 {
     for (int i = 0; i < 4; i++) 
 	{
-        this->source[i] = source[i]->clone();
-    }
-    for (int i = 0; i < 4; i++) 
-	{
-        this->types[i] = copy.types[i];
+		if (source[i])
+        	this->source[i] = source[i]->clone();
+		else
+			source[i] = NULL;
     }
 }
 MateriaSource	&MateriaSource::operator=(const MateriaSource &other)
@@ -44,12 +39,11 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &other)
 		{
 			if (this->source[i])
 				delete this->source[i];
-        	this->source[i] = source[i]->clone();
+			if (source[i])
+        		this->source[i] = source[i]->clone();
+			else
+				source[i] = NULL;
     	}
-		for (int i = 0; i < 4; i++) 
-		{
-        	this->types[i] = other.types[i];
-   		}
 	}
 	return (*this);
 }

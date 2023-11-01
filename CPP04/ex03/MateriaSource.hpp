@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:38:50 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/30 17:57:53 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 14:27:54 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ class MateriaSource : public IMateriaSource
 {
 private:
     AMateria* source[4];
-	std::string	types[4];
-
 public:
     MateriaSource();
 	MateriaSource(const MateriaSource &copy);

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:21:47 by yochakib          #+#    #+#             */
-/*   Updated: 2023/11/01 12:50:38 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 14:22:55 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ Character::Character(const Character& copy) : ICharacter()
 	this->name = copy.name;
 	for (int i = 0; i < 4; i++) 
 	{
-        this->inventory[i] = copy.inventory[i]->clone();
+		if (copy.inventory[i])
+        	this->inventory[i] = copy.inventory[i]->clone();
+		else
+			this->inventory[i] = NULL;
     }
 }
 Character& Character::operator=(const Character& other)
@@ -48,7 +51,10 @@ Character& Character::operator=(const Character& other)
 		{
 			if (this->inventory[i])
 				delete this->inventory[i];
-        	this->inventory[i] = other.inventory[i]->clone();
+			if (other.inventory[i])
+        		this->inventory[i] = other.inventory[i]->clone();
+			else
+				this->inventory[i] = NULL;
     	}
 	}
 	return (*this);
