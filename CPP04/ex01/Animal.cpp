@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:03:34 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/27 18:54:17 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/31 21:22:42 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Animal::Animal()
 {
-    this->type = "Default";
     std::cout << "Animal class called thr default constructor. "<< std::endl;
+    this->type = "Default";
 }
 
 Animal::Animal(const std::string& type)

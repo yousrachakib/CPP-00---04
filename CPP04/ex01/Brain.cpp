@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 16:42:12 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/28 20:21:28 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/31 21:23:56 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Brain::Brain()
 {
-    std::cout << "Brain constructor called." << std::endl;
+    std::cout << "Brain default constructor called." << std::endl;
 }
 
 Brain::Brain(const Brain& copy)

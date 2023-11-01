@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:40:02 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/28 21:24:55 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 11:59:55 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat() : Animal()
 {
+	attribut_cat = new Brain();
     std::cout << "Cat class called Default constructor to create [" << get_Catname() << " ]"<< std::endl;
 }
 
@@ -26,6 +27,8 @@ Cat::Cat(std::string& name) : Animal(name)
 Cat::Cat(const Cat& copy) : Animal(copy)
 {
     std::cout << "Cat class called the copy constructor to create [" << get_Catname() << " ]"<< std::endl;
+	this->type = copy.type;
+	attribut_cat = new Brain(*this->attribut_cat);
 }
 
 Cat::~Cat()
