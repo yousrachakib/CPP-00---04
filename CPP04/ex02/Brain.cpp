@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 16:42:12 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/30 15:11:56 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 13:27:57 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ Brain::Brain(const Brain& copy)
 
 Brain::~Brain() 
 {
-    delete [] (this->ideas);
     std::cout << "Brain destructor called." << std::endl;
 }
 
