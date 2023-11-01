@@ -6,19 +6,18 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:40:26 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/30 17:53:48 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/11/01 12:51:29 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 #include "AMateria.hpp"
 
-
 MateriaSource::MateriaSource() : IMateriaSource()
 {
     for (int i = 0; i < 4; i++) 
 	{
-        source[i] = nullptr;
+        source[i] = NULL;
     }
     for (int i = 0; i < 4; i++) 
 	{
@@ -67,7 +66,7 @@ void MateriaSource::learnMateria(AMateria* m)
 {
     for (int i = 0; i < 4; i++) 
 	{
-        if (source[i] == nullptr) 
+        if (source[i] == NULL) 
 		{
             source[i] = m;
             return;
@@ -79,10 +78,10 @@ AMateria* MateriaSource::createMateria(const std::string& type)
 {
     for (int i = 0; i < 4; i++) 
 	{
-        if (source[i] != nullptr && source[i]->getType() == type) 
+        if (source[i] != NULL && source[i]->getType() == type) 
 		{
             return source[i]->clone();
         }
     }
-    return nullptr;
+    return NULL;
 }

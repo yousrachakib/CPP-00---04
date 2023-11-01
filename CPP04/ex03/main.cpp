@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ybenlafk <ybenlafk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:55:10 by yochakib          #+#    #+#             */
-/*   Updated: 2023/10/30 17:55:22 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/10/31 11:03:50 by ybenlafk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,39 @@
 #include "Character.hpp"
 #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
-#include <iostream>
+
+
+void ll(void)
+{
+	system("leaks Interfeces");
+}
 
 int main() 
 {
-    IMateriaSource* src = new MateriaSource();
-    src->learnMateria(new Ice());
-    src->learnMateria(new Cure());
+    // IMateriaSource* src = new MateriaSource();
+    // src->learnMateria(new Ice());
+    // src->learnMateria(new Cure());
 
-    ICharacter* me = new Character("me");
+    atexit(ll);
+    // ICharacter* me = new Character("me");
 
-    AMateria* tmp;
-    tmp = src->createMateria("ice");
-    me->equip(tmp);
-    tmp = src->createMateria("cure");
-    me->equip(tmp);
+    // AMateria* tmp;
+    // tmp = src->createMateria("ice");
+    // me->equip(tmp);
+    // tmp = src->createMateria("cure");
+    // me->equip(tmp);
 
-    ICharacter* bob = new Character("bob");
-    me->use(0, *bob);
-    me->use(1, *bob);
+    // ICharacter* bob = new Character("bob");
+    // me->use(0, *bob);
+    // me->use(1, *bob);
 
-    delete bob;
-    delete me;
-    delete src;
+    // delete bob;
+    // delete me;
+    // delete src;
+    ICharacter *a = new Character("a");
+    a->equip(new Ice());
+    a->unequip(0);
+    delete a;
 
     return 0;
 }
